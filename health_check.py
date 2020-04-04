@@ -2,6 +2,7 @@
 
 import shutil
 import psutil
+from network import *
 
 def check_disk_usage(disk):
     du = shutil.disk_usage(disk)
@@ -14,8 +15,11 @@ def check_cpu_usage():
 
 if not check_disk_usage("/") or not check_cpu_usage():
     print("bad")
+elif check_localhost() and check_connectivity():
+    print("good")
 else:
-    print ("good")
+    print ("network issue")
+
 
 
 # diskUsage = shutil.disk_usage("/")
