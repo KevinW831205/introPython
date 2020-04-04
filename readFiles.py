@@ -24,3 +24,4 @@ file.close()
 for line in lines:
     line.capitalize()
 print(lines)
+
