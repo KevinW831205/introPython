@@ -30,3 +30,7 @@ print(re.search(r"o+l+","gooooldfish"));
 print(re.search(r"o+l+","goooodlfish"));
 print(re.search(r"ab?a","aaa"))
 print(re.search(r"ab?a","abaa"))
+
+result =re.search(r"^(\w*), (\w*)$","asdf, efg")
+print(result)
+print(result[1])
