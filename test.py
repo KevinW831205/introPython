@@ -1,4 +1,3 @@
-
 import csv
 from logparser import ErrorParser, StatParser
 

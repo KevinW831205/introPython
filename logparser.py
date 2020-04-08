@@ -1,7 +1,6 @@
 import re
 import operator
 
-
 class ErrorParser:
   errDict = {}
   def parseLine(self, line):
@@ -25,8 +24,6 @@ class StatParser:
       if not result is None:
           self.infoDict[result.group(1)] = self.infoDict.get(result.group(1),0) +1
           self.usernames.add(result.group(1))
-
-
   def sortedDictionaries(self):
     userListSorted = sorted(self.usernames)
     result = []
