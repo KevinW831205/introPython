@@ -19,6 +19,11 @@ class MyTestCase(unittest.TestCase):
         actual = duplicate_count(input)
         self.assertEqual(1, actual)
 
+    def test_4(self):
+        input = "abcdeaB"
+        actual = duplicate_count(input)
+        self.assertEqual(2, actual)
+
 
 if __name__ == '__main__':
     unittest.main()
