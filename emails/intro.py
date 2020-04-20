@@ -1,7 +1,8 @@
 from email.message import EmailMessage
 import os
 import mimetypes
-
+import smtplib
+import getpass
 
 message = EmailMessage()
 
@@ -29,3 +30,5 @@ with open(attatchment_path,'rb') as ap:
                            filename = os.path.basename(attatchment_path))
 
 print(message)
+
+
