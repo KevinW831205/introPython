@@ -1,4 +1,7 @@
 from email.message import EmailMessage
+import os
+import mimetypes
+
 
 message = EmailMessage()
 
@@ -13,4 +16,7 @@ just knew about this
 """
 message.set_content(body)
 
-print(message)
+attatchment_path = "sendme.txt"
+attatchment_filename = os.path.basename(attatchment_path)
+attatchement_mime_type,_ = mimetypes.guess_type(attatchment_path)
+print(attatchement_mime_type)
