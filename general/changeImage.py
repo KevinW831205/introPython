@@ -9,7 +9,7 @@ def process_image(dir):
         except:
             print("Error opening Image")
             continue
-        img.resize((600, 400)).convert('RGB').save("../opt/icons/" + file, "JPEG")
+        img.resize((600, 400)).convert('RGB').save("~/supplier-data/images" + file, "JPEG")
 
 
 process_image("~/supplier-data/images")
