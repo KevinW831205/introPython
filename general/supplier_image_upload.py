@@ -2,7 +2,7 @@ import requests
 import os
 
 url = "http://localhost/upload/"
-img_directory = "/supplier-data/images"
+img_directory = "supplier-data/images"
 
 
 
