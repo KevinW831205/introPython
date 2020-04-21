@@ -1,7 +1,9 @@
 import os
 import requests
 
+
 description_directory = "supplier-data/descriptions"
+ip = ""
 
 def parse_text_file(file_dir):
     with open(file_dir, "r") as file:
@@ -15,7 +17,10 @@ def parse_text_file(file_dir):
 
 def __main__():
     for file in os.listdir(description_directory):
-        print(parse_text_file(description_directory+"/"+file))
+        data = parse_text_file(description_directory+"/"+file)
+
+        response = requests.post(ip+"/fruits",data)
+        print("parsed file {} uploading to {}/fruits, responded with {}".format(file,ip,response.status_code))
 
 
 if __name__ == '__main__':
