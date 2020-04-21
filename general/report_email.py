@@ -41,8 +41,8 @@ def get_paragraph():
     result = ""
     for file_name in os.listdir(description_directory):
         with open(description_directory + "/" + file_name, "r") as file:
-            result += file.readline().strip() + "<br/>"
-            result += file.readline().strip() + "<br/>"
+            result += "name: " + file.readline().strip() + "<br/>"
+            result += "weight: " + file.readline().strip() + "<br/>"
             result += "<br/>"
     return result
 
@@ -52,7 +52,10 @@ def main():
     reports.generate_report("/tmp/processed.pdf",
                             "Processed Update On {}".format(datetime.datetime.today().strftime('%B %d, %Y')),
                             paragraph)
-    message = generate_email("automation@example.com","student-03-7c6da43177bf@example.com","Upload Completed - Online Fruit Store","All fruits are uploaded to our website successfully. A detailed list is attached to this email","/tmp/processed.pdf")
+    message = generate_email("automation@example.com", "student-03-7c6da43177bf@example.com",
+                             "Upload Completed - Online Fruit Store",
+                             "All fruits are uploaded to our website successfully. A detailed list is attached to this email",
+                             "/tmp/processed.pdf")
     send_email(message)
 
 
