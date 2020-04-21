@@ -19,7 +19,7 @@ def __main__():
     for file in os.listdir(description_directory):
         data = parse_text_file(description_directory+"/"+file,file)
 
-        response = requests.post(ip+"/fruits",data)
+        response = requests.post(ip+"/fruits/",data)
         print("parsed file {} uploading to {}/fruits, responded with {}".format(file,ip,response.status_code))
 
 

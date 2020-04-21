@@ -18,8 +18,6 @@ def upload(filename):
         r = requests.post(url,files={'file':opened})
         print("uploading {} to {} responded with {}".format(filename,url,r.status_code))
 
-# with open('/usr/share/apache2/icons/icon.sheet.png', 'rb') as opened:
-#     r = requests.post(url, files={'file': opened})
 
 
 def __main__():

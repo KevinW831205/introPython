@@ -8,5 +8,5 @@ def generate_report(attatchment, title, paragraph):
     styles = getSampleStyleSheet()
     report = SimpleDocTemplate(attatchment)
     report_title = Paragraph(title, styles["h1"])
-    report_paragraph = Paragraph(paragraph,styles["BodyTest"])
+    report_paragraph = Paragraph(paragraph,styles["BodyText"])
     report.build([report_title,report_paragraph])
